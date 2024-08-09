@@ -1,0 +1,94 @@
+.carousel{
+    height: 100vh;
+    width: 100%;
+    background-color: aqua;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Features */
+.about{
+    height: 100vh;
+    width: 100%;
+}
+
+.about img{
+    margin-top: 20px;
+    width: 100%;
+    height: 50%;
+}
+.about h1{
+   margin: 6px 0px;
+    font-size: 38px;
+    font-weight: bold;
+    color: #2a2114;
+    margin-bottom: 15px;
+}
+.about p{
+line-height: 22px;
+font-weight: 500;
+color: white;
+background-color: #2A2114;
+font-size: 17px;
+border: 2px solid white;
+padding: 7px 10px;
+}
+
+.about p:hover{
+    transform: scale(1.04);
+}
+
+.price{
+    min-height: 450px;
+    width: 100%;
+background-color: #D7B2AB;
+    color:#2A2114 ;
+}
+
+.price button{
+    border: 2px solid rgb(188, 79, 79);
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.price button:hover{
+    border: 2px solid black;
+}
+
+
+@media (max-width: 768px){
+    .about h1{
+        font-size: 32px;
+    }
+    .about p{
+        font-size: 16px;
+        padding: 8px 7px;
+        width: 90%;
+    }
+    .about p:hover{
+        transform: scale(1.04);
+    }
+}
+
+
