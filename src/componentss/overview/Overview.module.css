@@ -1,0 +1,48 @@
+.view{
+    min-height: 85vh;
+    width: 100%;
+    background-color: black;
+    color: white; 
+}
+.view button{
+    padding: 8px 16px;
+    background-color: #EEB75D;
+    color: black;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #EEB75D;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.view button:hover{
+    transform: scale(1.05);
+}
+
+.view h2{
+background-color: transparent;
+    margin-bottom: 10px;
+}
+.view p{
+    line-height: 27px;
+    font-size: 18px;
+    color: rgb(184, 177, 177);
+}
+.view img{
+    min-height: 100%;
+    min-width: 100%;
+}
+
+
+
+@media (max-width: 768px){
+.view p{
+    font-size: 14px;
+}
+.view button{
+    padding: 7px 13px;
+    font-size: 14px;
+}
+}

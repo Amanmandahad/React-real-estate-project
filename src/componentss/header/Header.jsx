@@ -25,7 +25,6 @@ const contactform = () => {
         <li><Link to='features' >Features</Link></li>
         <li><Link to='overview' >Overview</Link></li>
         <li><Link to='contact' >Contact</Link></li>
-        <li><Link to='location' >Location</Link></li>
         <li><Link to='Connectivity' >Connectivity</Link></li>
       </ul>
     </div>

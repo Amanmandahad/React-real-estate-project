@@ -1,35 +1,7 @@
-.carousel{
-    height: 100vh;
-    width: 100%;
-    background-color: aqua;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Features */
 .about{
-    height: 100vh;
+    min-height: 194vh;
     width: 100%;
 }
 
@@ -75,19 +47,28 @@ background-color: #D7B2AB;
 .price button:hover{
     border: 2px solid black;
 }
+.tablefont{
+    font-size: 18px;
+}
 
 
 @media (max-width: 768px){
     .about h1{
-        font-size: 32px;
+        font-size: 30px;
     }
     .about p{
-        font-size: 16px;
-        padding: 8px 7px;
+        font-size: 14px;
+        padding: 6px 6px;
         width: 90%;
     }
     .about p:hover{
         transform: scale(1.04);
+    }
+    .price button{
+        font-size: 12px;
+    }
+    .tablefont{
+        font-size: 15px;
     }
 }
 

@@ -6,6 +6,7 @@
     box-shadow: 0px 0px 10px white;
     top: 0;
     background-color: black;
+    color: white;
     left: 0;
     position: fixed;
     z-index: 1000;
@@ -76,9 +77,6 @@ box-shadow: 0px 0px 20px #EEB75D;
     border: 2px solid white;
 }
 
-.icon:hover{
-    transform: scale(1.1);
-}
 
 @media (max-width: 768px){
     .container img{
@@ -89,6 +87,6 @@ box-shadow: 0px 0px 20px #EEB75D;
         right: 10px;
     }
 .icon{
-    font-size: 35px;
+    font-size: 40px;
 }
 }

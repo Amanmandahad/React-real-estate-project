@@ -9,33 +9,19 @@ import feature3 from '../assets/realfeature3.jpg';
 const fadeInFromRight = {
   hidden: { opacity: 0, x: 50 },
   visible: { opacity: 1, x: 0 },
-  transition: { duration: 10, ease: "easeOut" } // Slow transition from right
+  transition: { duration: 1, ease: "easeOut" } // Slow transition from right
 };
 
 const slideInFromRight = {
   hidden: { opacity: 0, x: 100 },
   visible: { opacity: 1, x: 0 },
-  transition: { duration: 10, ease: "easeOut" } // Slow transition with easing
+  transition: { duration: 1, ease: "easeOut" } // Slow transition with easing
 };
 
 const About = () => {
   return (
     <>
-    <div className={style.carousel} id='about'>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
     {/* Features */}
     <div className={style.about} id='features'>
@@ -48,7 +34,7 @@ const About = () => {
       >
         <div className="container">
           <div className="row align-items-center justify-content-between" >
-            <div className="col-lg-5 col-md-6" style={{ marginTop: '40px' }}>
+            <div className="col-lg-5 col-md-6" style={{ marginTop: '40px',marginBottom:'20px' }}>
               <motion.h1
                 initial="hidden"
                 whileInView="visible"
@@ -85,7 +71,7 @@ const About = () => {
       >
         <div className="container">
           <div className="row align-items-center justify-content-between">
-            <div className="col-lg-5 col-md-6">
+            <div className="col-lg-5 col-md-6" >
               <motion.img
                 src={feature2}
                 className='img-fluid'
@@ -95,7 +81,7 @@ const About = () => {
                 transition={{ duration: 2, ease: "easeInOut" }} // Slow scale-up effect
               />
             </div>
-            <div className="col-lg-5 col-md-6">
+            <div className="col-lg-5 col-md-6" style={{marginBottom:'30px'}}>
               <motion.h1
                 style={{ color: 'white' }}
                 initial="hidden"
@@ -178,29 +164,29 @@ const About = () => {
                 <table className="table table-striped table-bordered text-center">
                   <thead>
                     <tr>
-                      <th scope="col" style={{ fontSize: '20px' }}>Configuration</th>
-                      <th scope="col" style={{ fontSize: '20px' }}>Area (Sq.ft)</th>
-                      <th scope="col" style={{ fontSize: '20px' }}>Price</th>
+                      <th scope="col" className={style.tablefont}>Configuration</th>
+                      <th scope="col" className={style.tablefont}>Area (Sq.ft)</th>
+                      <th scope="col" className={style.tablefont}>Price</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td style={{ fontSize: '18px' }}>3bhk</td>
-                      <td style={{ fontSize: '18px' }}>1,740 Sq.ft</td>
-                      <td style={{ fontSize: '18px' }}>
+                      <td >3bhk</td>
+                      <td className={style.tablefont}>1,740 Sq.ft</td>
+                      <td >
                         <button className="btn">Click for price</button>
                       </td>
                     </tr>
                     <tr>
-                      <td style={{ fontSize: '18px' }}>3.5bhk</td>
-                      <td style={{ fontSize: '18px' }}>2,364 Sq.ft</td>
+                      <td className={style.tablefont}>3.5bhk</td>
+                      <td className={style.tablefont}>2,364 Sq.ft</td>
                       <td>
                         <button className="btn">Click for price</button>
                       </td>
                     </tr>
                     <tr>
-                      <td style={{ fontSize: '18px' }}>4bhk</td>
-                      <td style={{ fontSize: '18px' }}>2,259 / 3,090 / 3,108 Sq.ft</td>
+                      <td className={style.tablefont}>4bhk</td>
+                      <td className={style.tablefont}>2,259 / 3,090 / 3,108 Sq.ft</td>
                       <td>
                         <button className="btn">Click for price</button>
                       </td>
