@@ -1,24 +1,30 @@
-.divider{
+/* Divider */
+.divider {
     width: 100%;
-
-    background-color:rgba(59, 51, 51, 0.63);
-    height: 1px;
+    background-color: rgba(59, 51, 51, 0.63);
+    /* min-height: 100vh; */
 }
+
+/* Contact Section */
 .contact {
-    min-height: 100vh;
+    min-height: 80vh;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
     width: 100%;
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: #EEB75D;
 }
 
+/* Map Section */
 .map {
     margin-top: 35px;
-    
     position: relative;
     width: 100%;
-    padding-bottom: 100%; 
+    padding-bottom: 56.25%; /* Aspect Ratio 16:9 */
     height: 0;
     overflow: hidden;
+    margin-bottom: 10px;
 }
 
 .map iframe {
@@ -28,70 +34,51 @@
     border: 0;
     width: 100%;
     height: 100%;
+
 }
 
-.form {
-    padding: 20px;
-    border-radius: 20px;
-    background-color: #D7B2AB;
-    margin: 20px auto; 
-    max-width: 800px; 
-    text-align: center; 
-}
 
-.form h1 {
-    color: #2A2114;
-    font-weight: 700;
-    margin-bottom: 5px; 
-}
-
-.form input,
-.form textarea {
-    width: calc(100% - 2rem); 
-    padding: 15px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
+.contact h1 {
+    font-size: 3.1vw; 
+    text-align: center;
     color: black;
-    margin-top: 15px;
-    font-size: 1.1rem;
 }
 
-.form textarea {
-    resize: vertical;
-    margin-top: 25px;
+.text {
+    min-height: 200px;
+    margin-top: 20px;
+    color: #9C6D41;
+    border: 1px solid white;
+    display: flex; 
+    justify-content: space-around; 
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0px 0px 14px rgb(145, 76, 76);
+    max-width: 1000px; 
 }
 
-.form button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    background-color: #333; 
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-top: 20px; 
-    cursor: pointer;
+.textItem {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
 }
 
-.form button:hover {
-    background-color: #555; 
-    transform: scale(1.03);
+.text h5 {
+    font-size: 1.5rem;
+    margin: 0; 
+    line-height: 2.0;
 }
 
 @media (max-width: 768px) {
-    .form input,
-    .form textarea {
-        width: calc(100% - 1rem); 
-        margin-left: 0; 
-        font-size: 1rem; 
+    .contact h1 {
+        font-size: 6vw;
     }
-}
 
-@media (max-width: 480px) {
-    .form input,
-    .form textarea {
-        font-size: 0.9rem; 
-        padding: 10px; 
+    .text h5 {
+        font-size: 4vw;
+    }
+    .text{
+        min-height: auto;
+        
     }
 }

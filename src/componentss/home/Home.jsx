@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
     <div className={style.home} id='home'>
-      {/* <video src={video1} autoPlay loop muted controls>
+      {/* <video src={video1} autoPlay loop  controls>
         Your browser does not support the video tag.
       </video> */}
     </div>

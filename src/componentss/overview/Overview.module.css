@@ -1,10 +1,13 @@
-.view{
-    min-height: 85vh;
+.view {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
     width: 100%;
     background-color: black;
     color: white; 
-}
-.view button{
+  }
+  
+  .view button {
     padding: 8px 16px;
     background-color: #EEB75D;
     color: black;
@@ -15,34 +18,79 @@
     box-shadow: 0px 0px 15px #EEB75D;
     margin-bottom: 10px;
     border: 1px solid black;
-}
-
-.view button:hover{
+  }
+  
+  .view button:hover {
     transform: scale(1.05);
-}
-
-.view h2{
-background-color: transparent;
+  }
+  
+  .view h2 {
+    background-color: transparent;
     margin-bottom: 10px;
-}
-.view p{
+  }
+  
+  .view p {
     line-height: 27px;
     font-size: 18px;
     color: rgb(184, 177, 177);
-}
-.view img{
+  }
+  
+  .view img {
     min-height: 100%;
     min-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* location benfits */
+.localities{
+  min-height: 90vh;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+.localities img{
+  margin-top: 20px;
+  color: aliceblue;
+  height: 75px;
+  width: 85px;
 }
 
+.skill{
+  box-shadow: 0px 0px 8px gold;
+  margin-top: 25px;
+  width: 250px;
+  max-height: 135px;
+}
 
+.skill:hover{
+  transform: scale(1.05);
+}
 
-@media (max-width: 768px){
-.view p{
-    font-size: 14px;
+.localities p{
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
-.view button{
-    padding: 7px 13px;
-    font-size: 14px;
-}
-}
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .view p {
+      font-size: 14px;
+    }
+  
+    .view button {
+      padding: 7px 13px;
+      font-size: 14px;
+    }
+    .localities img{
+      width: 55px;
+      height: 50px;
+    }
+    .skill{
+      width: 140px;
+    }
+
+    .localities p{
+      font-size: 14px;
+    }
+  }
+  

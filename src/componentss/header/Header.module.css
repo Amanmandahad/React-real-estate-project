@@ -64,14 +64,14 @@ box-shadow: 0px 0px 20px #EEB75D;
     justify-content: center;
     position: fixed; 
     bottom: 20px;
-    gap: 8px;
-    right: 20px; 
+    gap: 6px;
+    right: 15px; 
     z-index: 1000; 
 }
 
 .icon{
-    font-size: 60px;
-    background-color: rgb(87, 57, 31);
+    font-size: 65px;
+    background-color: black;
     color: white;
     border-radius: 10px;
     border: 2px solid white;
@@ -90,6 +90,6 @@ box-shadow: 0px 0px 20px #EEB75D;
         right: 10px;
     }
 .icon{
-    font-size: 40px;
+    font-size: 47px;
 }
 }

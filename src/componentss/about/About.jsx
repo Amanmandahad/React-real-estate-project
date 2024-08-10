@@ -26,11 +26,12 @@ const About = () => {
     {/* Features */}
     <div className={style.about} id='features'>
       <motion.div
-        style={{ backgroundColor: '#D7B2AB' }}
+        style={{ backgroundColor: ' rgb(210, 190, 187)' }}
         initial="hidden"
         whileInView="visible"
         variants={fadeInFromRight}
         viewport={{ once: true }}
+        className={style.features1}
       >
         <div className="container">
           <div className="row align-items-center justify-content-between" >
@@ -68,6 +69,7 @@ const About = () => {
         whileInView="visible"
         variants={slideInFromRight}
         viewport={{ once: true }}
+        className={style.features2}
       >
         <div className="container">
           <div className="row align-items-center justify-content-between">
