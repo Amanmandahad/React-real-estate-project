@@ -16,7 +16,7 @@
 
 
 .about{
-    min-height: 194vh;
+    min-height: 100%;
     width: 100%;
 }
 
@@ -69,15 +69,77 @@ background-color:  rgb(210, 190, 187);
 }
 
 
+/* carousel */
+
+/* Carousel Styles */
+/* Carousel Styles */
+.carosal {
+    min-height: 50vh;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.slider-container {
+    min-height: 100%;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.slider {
+    height: 100%;
+    width: 100%;
+
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Add gap between images */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.cards img {
+    width: 100%;
+    max-width: 340px; /* Ensure images do not exceed this width */
+    min-height: 280px; /* Adjust as needed */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
 
 
+@media (max-width: 1200px) {
+    .cards img {
+        max-width: 270px;
+        max-height: 270px;
+    }
+}
 
+@media (max-width: 992px) {
+    .cards img {
+        max-width: 250px;
+        min-height: 240px;
+    }
+}
 
+@media (max-width: 768px) {
+   
+    .cards img {
+        max-width: 230px;
+        min-height: 230px;
+    }
+}
 
-
-
-
-
+@media (max-width: 576px) {
+   
+    .cards img {
+        max-width: 200px;
+        min-height: 210px;
+    }
+}
 
 
 

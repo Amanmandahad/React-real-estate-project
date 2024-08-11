@@ -1,10 +1,57 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
 import style from './About.module.css';
 import feature1 from '../assets/Feature1img.png';
 import feature2 from '../assets/Feature2.png';
 import { GiMaterialsScience } from "react-icons/gi";
 import feature3 from '../assets/realfeature3.jpg';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import card1 from '../assests2/card1.jfif'
+import card2 from '../assests2/card2.png'
+import card3 from '../assests2/card3.jpeg'
+import card4 from '../assests2/card4.jpg'
+import card5 from '../assests2/card5.png'
+
+const settings = {
+  dots: true,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 2000,
+  autoplaySpeed: 1,
+  pauseOnHover: true,
+  className: "center",
+  cssEase: "linear",
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+};
 
 const fadeInFromRight = {
   hidden: { opacity: 0, x: 50 },
@@ -150,7 +197,7 @@ const About = () => {
         variants={slideInFromRight}
         viewport={{ once: true }}
       >
-        <div className="container">
+        <div className="container" id='price'>
           <div className="row align-items-center justify-content-between">
             <div className="col-lg-5 col-md-6" style={{ marginTop: '30px' }}>
               <motion.h1
@@ -210,6 +257,49 @@ const About = () => {
           </div>
         </div>
       </motion.div>
+      {/* Carousel */}
+      <div className={style.carosal}>
+    <div className={`slider-container ${style.slider}`}>
+        <Slider {...settings}>
+            <div className={style.cards}>
+                <img src={card1} alt="Feature 1" />
+            </div>
+            <div className={style.cards}>
+                <img src={card2} alt="Feature 2" />
+            </div>
+            <div className={style.cards}>
+                <img src={card3} alt="Feature 3" />
+            </div>
+            <div className={style.cards}>
+                <img src={card4} alt="Feature 4" />
+            </div>
+            <div className={style.cards}>
+                <img src={card5} alt="Feature 5" />
+            </div>
+        </Slider>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
     </>
   );

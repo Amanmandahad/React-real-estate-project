@@ -1,7 +1,7 @@
 .footer{
     min-height: 80px;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,13 +15,11 @@
     align-items: center;
     justify-content: center;
 }
-.footers h2{
-    font-size: 1.2rem;
-    text-align: center;
+.footer h2{
     font-weight: bold;
 }
 .footer p{
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .footer img{
@@ -31,8 +29,10 @@
 
 @media (max-width: 768px){
     .footer img{
-        width: 100%;
+        width: 80%;
         height: 50%;
+        margin: 10px 0px;
+    
     }
     .footer p{
         font-size: 1rem;

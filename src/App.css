@@ -1,13 +1,28 @@
-*{
-  margin: 0%;
-  padding: 0%;
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  /* overflow-x: hidden; */
 }
 
-li{
-  list-style-type: none;
-  
+html, body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
 }
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 a{
   color: white;
   text-decoration: none;

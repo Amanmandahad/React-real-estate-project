@@ -5,14 +5,12 @@ import video1 from '../assets/rmv-26-07-2024 (1).mp4';
 const Home = () => {
   return (
     <>
-    <div className={style.home} id='home'>
-      {/* <video src={video1} autoPlay loop  controls>
-        Your browser does not support the video tag.
-      </video> */}
+    <div className={style.home} id='Home'>
+      <video src={video1} autoPlay loop  controls>
+      
+      </video>
     </div>
-<div className={style.carousel} id='about'>
 
-</div>
 </>
   );
 }

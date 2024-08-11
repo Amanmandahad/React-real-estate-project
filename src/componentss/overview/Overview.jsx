@@ -85,7 +85,7 @@ const Overview = () => {
             animate="visible"
           >
             <img src={gym} className='img-fluid' alt="" />
-            <p>Gymnasium, Aerobics Area</p>
+            <p>Gymnasium</p>
           </motion.div>
           <motion.div
             className={`col-lg-2 col-md-2 col-sm-2 ${style.skill}`}
@@ -95,7 +95,7 @@ const Overview = () => {
             transition={{ delay: 0.1 }}
           >
             <img src={swim} className='img-fluid' alt="" />
-            <p>Swimming Pool, Lounge Bar</p>
+            <p>Swimming Pool</p>
           </motion.div>
           <motion.div
             className={`col-lg-2 col-md-2 col-sm-2 ${style.skill}`}

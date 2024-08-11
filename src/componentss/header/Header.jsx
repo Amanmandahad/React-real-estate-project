@@ -1,44 +1,49 @@
-import React from 'react'
-import style from './Header.module.css'
-import logo from '../assets/logo.png'
-import { Link } from 'react-scroll'
+import React, { useState } from 'react';
+import style from './Header.module.css';
+import logo from '../assets/logo.png';
+import { Link } from 'react-scroll';
 import { MdArrowUpward } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io";
+
 const Header = () => {
+  const [menuopen, setOpen] = useState(false);
 
-const Scrollup = () =>{
-  window.scrollTo({ top: 0, behavior:'smooth' })
-}
+  const scrollUp = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-const contactform = () => {
+  const toggleMenu = () => {
+    setOpen(!menuopen);
+  };
 
-}
   return (
     <>
-    <div className={style.container}>
-    <div>
-      <img src={logo} alt="" />
-    </div>
-    <div>
-      <ul>
-        <li><Link to='about' >About</Link></li>
-        <li><Link to='features' >Features</Link></li>
-        <li><Link to='overview' >Overview</Link></li>
-        <li><Link to='Location' >Location</Link></li>
-        <li><Link to='Connectivitys' >Connectivity</Link></li>
-      </ul>
-    </div>
-    <div style={{display:'flex', alignItems:'center'}}>
-        <button onClick={contactform}> <i className="bi bi-telephone-fill"></i>Enquire Now</button>
+      <header className={style.container}>
+        <div>
+          <img src={logo} alt="Logo" />
+        </div>
+        <nav>
+          <ul className={`${style.navList} ${menuopen ? style.menuOpen : ''}`}>
+            <li><Link to='Home' smooth={true}>Home</Link></li>
+            <li><Link to='features' smooth={true}>Features</Link></li>
+            <li><Link to='price' smooth={true}>Price</Link></li>
+            <li><Link to='overview' smooth={true}>Overview</Link></li>
+            <li><Link to='Location' smooth={true}>Location</Link></li>
+          </ul>
+        </nav>
+      
+          <button className={style.btn}><i className="bi bi-telephone-fill"></i> Enquire Now</button>
+          <button className={style.menuToggle} onClick={toggleMenu}>
+          <i className={`bi bi-list ${menuopen? 'bi-x' : 'bi-menu'}`}></i>
+          </button>
+       
+      </header>
+      <div className={style.styles}>
+        <MdArrowUpward className={style.icon} onClick={scrollUp} />
+        <IoLogoWhatsapp className={style.icon} style={{ backgroundColor: "green" }} />
       </div>
-    </div>
-<div className={style.styles}>
-
-<MdArrowUpward className={style.icon} onClick={Scrollup}/>
-<IoLogoWhatsapp className={style.icon} style={{backgroundColor:"green"}} />
-</div>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

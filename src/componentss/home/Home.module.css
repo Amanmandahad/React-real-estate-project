@@ -2,6 +2,8 @@
     height: 85vh;
     margin-top: 90px;
     width: 100%;
+    /* display: flex;
+    align-items: center; */
 }
 .home video{
     width: 100%;
@@ -10,9 +12,15 @@
 }
 
 
-.carousel{
-    height: 100vh;
-    width: 100%;
-    background-color: aqua;
-}
 
+@media (max-width: 768px){
+    .home {
+        max-height: 60vh;
+        max-width: 100%;
+    }
+    .home video {
+        max-height: 60vh;
+        
+      
+    }
+}
