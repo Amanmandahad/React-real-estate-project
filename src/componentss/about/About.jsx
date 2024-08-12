@@ -20,7 +20,7 @@ const settings = {
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
-  speed: 4000,
+  speed: 2000,
   autoplaySpeed: 1,
   pauseOnHover: true,
   className: "center",
