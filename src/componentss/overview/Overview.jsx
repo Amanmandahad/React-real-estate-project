@@ -6,20 +6,20 @@ import overimg from '../assets/Overviewimg.jpeg';
 import gym from '../assests2/gym1.png';
 import swim from '../assests2/swimming.png';
 import indooe from '../assests2/indoor.png';
-import clubhouse from '../assests2/Clubhouse2.png';
+import clubhouse from '../assests2/Clubhouse2.png'
 import openair from '../assests2/openair.png';
 import jogging from '../assests2/jogging.png';
 import sports from '../assests2/sports.png';
 import spa from '../assests2/spa.jpg';
-import business from '../assests2/buisness.png';
+import business from '../assests2/buisness.png'
 import kids from '../assests2/kidsplay.png';
 import hall from '../assests2/hall.png';
-
 const Overview = () => {
+ 
   const fadeInUp = {
     hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-  };
+    visible: { opacity: 1, y: 0, transition: { duration: 3 } }
+  };  
 
   const { ref: ref1, inView: inView1 } = useInView({
     triggerOnce: true,
@@ -42,7 +42,7 @@ const Overview = () => {
               style={{ marginTop: '30px' }}
               initial={{ opacity: 0, x: -50 }}
               animate={inView1 ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.8 }}
             >
               <button>Overview</button>
               <h2>LUXURY HOME</h2>
@@ -59,7 +59,7 @@ const Overview = () => {
               style={{ marginTop: '30px' }}
               initial={{ opacity: 0, x: 50 }}
               animate={inView2 ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.8 }}
             >
               <motion.img
                 src={overimg}
@@ -67,7 +67,7 @@ const Overview = () => {
                 className='img-fluid'
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={inView2 ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                transition={{ duration: 0.8 }}
               />
             </motion.div>
           </div>
@@ -76,80 +76,136 @@ const Overview = () => {
 
       {/* Gallery Slider */}
       <div className={style.localities}>
-        <div className="container">
-          <div className="row justify-content-between align-items-center text-center">
-            {[
-              { img: gym, label: 'Gymnasium', delay: 0 },
-              { img: swim, label: 'Swimming Pool', delay: 0.1 },
-              { img: indooe, label: 'Indoor Games Area', delay: 0.2 },
-              { img: clubhouse, label: 'Clubhouses', delay: 0.3 }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className={`col-lg-2 col-md-2 col-sm-2 ${style.skill}`}
-                variants={fadeInUp}
-                initial="hidden"
-                animate="visible"
-                transition={{ delay: item.delay }}
-              >
-                <img src={item.img} className='img-fluid' alt={item.label} />
-                <p>{item.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        <br />
-        <br />
-
-        <div className="container">
-          <div className="row justify-content-between align-items-center text-center">
-            {[
-              { img: openair, label: 'Open-Air Amphitheatre', delay: 0 },
-              { img: jogging, label: 'Jogging Paths', delay: 0.1 },
-              { img: sports, label: 'Multiple Sports Courts', delay: 0.2 },
-              { img: spa, label: 'Spa, Salon', delay: 0.3 }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className={`col-lg-2 col-md-2 col-sm-2 ${style.skill}`}
-                variants={fadeInUp}
-                initial="hidden"
-                animate="visible"
-                transition={{ delay: item.delay }}
-              >
-                <img src={item.img} className='img-fluid' alt={item.label} />
-                <p>{item.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        <br />
-        <br />
-
-        <div className="container">
-          <div className="row justify-content-around align-items-center text-center">
-            {[
-              { img: business, label: 'Business Centre', delay: 0 },
-              { img: kids, label: 'Kids Play Area', delay: 0.1 },
-              { img: hall, label: 'Banquet Hall', delay: 0.2 }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className={`col-lg-3 col-md-3 col-sm-3 ${style.skill}`}
-                variants={fadeInUp}
-                initial="hidden"
-                animate="visible"
-                transition={{ delay: item.delay }}
-              >
-                <img src={item.img} className='img-fluid' alt={item.label} />
-                <p>{item.label}</p>
-              </motion.div>
-            ))}
-          </div>
+      <div className="container">
+        <div className="row justify-content-between align-items-center text-center">
+          <motion.div
+            className={`col-lg-2 col-md-2 col-sm-2 ${style.skill}`}
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+          >
+            <img src={gym} className='img-fluid' alt="" />
+            <p>Gymnasium</p>
+          </motion.div>
+          <motion.div
+            className={`col-lg-2 col-md-2 col-sm-2 ${style.skill}`}
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.1 }}
+          >
+            <img src={swim} className='img-fluid' alt="" />
+            <p>Swimming Pool</p>
+          </motion.div>
+          <motion.div
+            className={`col-lg-2 col-md-2 col-sm-2 ${style.skill}`}
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.2 }}
+          >
+            <img src={indooe} className='img-fluid' alt="" />
+            <p>Indoor Games Area</p>
+          </motion.div>
+          <motion.div
+            className={`col-lg-2 col-md-2 col-sm-2 ${style.skill}`}
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.3 }}
+          >
+            <img src={clubhouse} className='img-fluid' alt="" />
+            <p>Clubhouses</p>
+          </motion.div>
         </div>
       </div>
+
+      <br />
+      <br />
+
+      <div className="container">
+        <div className="row justify-content-between align-items-center text-center">
+          <motion.div
+            className={`col-lg-2 col-md-2 col-sm-2 ${style.skill}`}
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+          >
+            <img src={openair} className='img-fluid' alt="" />
+            <p>Open-Air Amphitheatre</p>
+          </motion.div>
+          <motion.div
+            className={`col-lg-2 col-md-2 col-sm-2 ${style.skill}`}
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.1 }}
+          >
+            <img src={jogging} className='img-fluid' alt="" />
+            <p>Jogging Paths</p>
+          </motion.div>
+          <motion.div
+            className={`col-lg-2 col-md-2 col-sm-2 ${style.skill}`}
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.2 }}
+          >
+            <img src={sports} className='img-fluid' alt="" />
+            <p>Multiple Sports Courts</p>
+          </motion.div>
+          <motion.div
+            className={`col-lg-2 col-md-2 col-sm-2 ${style.skill}`}
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.3 }}
+          >
+            <img src={spa} className='img-fluid' alt="" />
+            <p>Spa, Salon</p>
+          </motion.div>
+        </div>
+      </div>
+
+      <br />
+      <br />
+
+      <div className="container">
+        <div className="row justify-content-around align-items-center text-center">
+          <motion.div
+            className={`col-lg-3 col-md-3 col-sm-3 ${style.skill}`}
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+          >
+            <img src={business} className='img-fluid' alt="" />
+            <p>Business Centre</p>
+          </motion.div>
+          <motion.div
+            className={`col-lg-3 col-md-2 col-sm-3 ${style.skill}`}
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.1 }}
+          >
+            <img src={kids} className='img-fluid' alt="" />
+            <p>Kids Play Area</p>
+          </motion.div>
+          <motion.div
+            className={`col-lg-3 col-md-3 col-sm-3 ${style.skill}`}
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.2 }}
+          >
+            <img src={hall} className='img-fluid' alt="" />
+            <p>Banquet Hall</p>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+
+
     </>
   );
 };
